@@ -1,0 +1,114 @@
+/* Modal.css */
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  z-index: 1002;
+  width: 520px;
+  padding: 24px;
+}
+
+.heading {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.formItem {
+  display: flex;
+  align-items: center; /* Align label and input vertically centered */
+  margin-bottom: 16px;
+  margin-left: 40px;
+}
+
+.formItem label {
+  flex: 1; /* Allow label to take available space */
+  margin-right: 16px; /* Add space between label and input */
+}
+
+.input {
+  flex: 6; /* Allow input to take more space than label */
+  width: auto; /* Allow input to adjust its width based on content */
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.validationMessage {
+  color: red;
+  margin-top: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.cancelButton {
+  padding: 8px 24px;
+  color: #666;
+  border: 1px solid #d9d9d9;
+}
+
+.okButton {
+  padding: 8px 24px;
+  background-color: #1890ff;
+  color: white;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 4px 4px 0 0;
+  padding: 16px 2px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.closeIcon svg {
+  width: 16px;
+  height: 16px;
+  fill: #333; /* Adjust color as needed */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; /* Adjust the margin as needed */
+  border-top: 1px solid #e8e8e8;
+}
+
+.cancelButton,
+.okButton {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.okButton {
+  background-color: #3498db;
+  color: white;
+}
