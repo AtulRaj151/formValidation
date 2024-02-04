@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, Modal } from '../components';
 import './DashBoard.css';
 import { data } from '../assets/mockData';
+import Spinner from '../components/spinner/Spinner';
 
 function DashBoard() {
   const [mockData, setMockData] = useState(data);
@@ -40,9 +41,14 @@ function DashBoard() {
     setMockData(updatedData);
   };
 
+  if (mockData.length === 0) {
+    return <Spinner />
+  }
+
   return (
     <>
       <div id='dashboard-container'>
+
         {mockData.map((item) => (
           <Card
             name={item?.name}
