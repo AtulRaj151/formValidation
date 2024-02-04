@@ -20,7 +20,7 @@
   background-color: white;
   border-radius: 4px;
   z-index: 1002;
-  width: 520px;
+  width: 40vw;
   padding: 24px;
 }
 
@@ -44,7 +44,7 @@
 
 .input {
   flex: 6; /* Allow input to take more space than label */
-  width: auto; /* Allow input to adjust its width based on content */
+  width: 70%; /* Allow input to adjust its width based on content */
   padding: 8px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
@@ -52,7 +52,14 @@
 
 .validationMessage {
   color: red;
-  margin-top: 8px;
+  margin-left: 20%;
+   clear: both;
+    min-height: 22px;
+    margin-top: -2px;
+    color: rgba(0,0,0,.45);
+    font-size: 14px;
+    line-height: 1.5;
+    transition: color .3s cubic-bezier(.215,.61,.355,1);
 }
 
 .buttonContainer {
@@ -111,4 +118,8 @@
 .okButton {
   background-color: #3498db;
   color: white;
+}
+
+.input-wrapper {
+  width: 100%;
 }

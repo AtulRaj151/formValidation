@@ -79,7 +79,8 @@ const Modal = ({ isOpen, onClose, onUpdateContent, selectedCard }) => {
       document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
-  console.log("form data", formData)
+
+
   return (
     <div className="overlay" style={{ display: isOpen ? 'flex' : 'none' }} onClick={onClose}>
       <div className="modal" style={{ display: isOpen ? 'block' : 'none' }} onClick={(e) => e.stopPropagation()}>
@@ -95,21 +96,25 @@ const Modal = ({ isOpen, onClose, onUpdateContent, selectedCard }) => {
           <form className="form-horizontal">
             {fields.map(({ label, key, type }) => (
               <div key={key} className="formItem">
-                <label htmlFor={key} className="required" title={label}>
-                  <span style={{ color: 'red' }}>*</span>{label}:
-                </label>
-                <input
-                  type={type}
-                  id={key}
-                  className="input"
-                  value={formData[key]}
-                  onChange={(e) => handleInputChange(key, e.target.value)}
-                />
-                {validationMessages[key] && (
-                  <div className="validationMessage" style={{ color: 'red', marginTop: '8px' }}>
-                    {validationMessages[key]}
-                  </div>
-                )}
+
+                <div className='input-wrapper'>
+                  <label htmlFor={key} className="required" title={label}>
+                    <span style={{ color: 'red' }}>*</span>{label}:
+                  </label>
+                  <input
+                    type={type}
+                    id={key}
+                    className="input"
+                    value={formData[key]}
+                    onChange={(e) => handleInputChange(key, e.target.value)}
+                  />
+                  {validationMessages[key] && (
+                    <div className="validationMessage" style={{ color: 'red', marginTop: '8px' }}>
+                      {validationMessages[key]}
+                    </div>
+
+                  )}
+                </div>
               </div>
             ))}
           </form>
