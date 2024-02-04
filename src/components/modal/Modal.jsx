@@ -93,31 +93,36 @@ const Modal = ({ isOpen, onClose, onUpdateContent, selectedCard }) => {
           </span>
         </div>
         <div>
-          <form className="form-horizontal">
-            {fields.map(({ label, key, type }) => (
-              <div key={key} className="formItem">
+          <div className='form-body'>
+            <form className="form-horizontal">
+              {fields.map(({ label, key, type }) => (
+                <div key={key} className="formItem">
 
-                <div className='input-wrapper'>
-                  <label htmlFor={key} className="required" title={label}>
-                    <span style={{ color: 'red' }}>*</span>{label}:
-                  </label>
-                  <input
-                    type={type}
-                    id={key}
-                    className="input"
-                    value={formData[key]}
-                    onChange={(e) => handleInputChange(key, e.target.value)}
-                  />
-                  {validationMessages[key] && (
-                    <div className="validationMessage" style={{ color: 'red', marginTop: '8px' }}>
-                      {validationMessages[key]}
-                    </div>
+                  <div className='label-wrapper'>
+                    <label htmlFor={key} className="required" title={label}>
+                      <span style={{ color: 'red' }}>*</span>{label}:
+                    </label>
+                  </div>
+                  <div className='input-wrapper'>
+                    <input
+                      type={type}
+                      id={key}
+                      className="input"
+                      value={formData[key]}
+                      onChange={(e) => handleInputChange(key, e.target.value)}
+                    />
+                    {validationMessages[key] && (
+                      <div className="validationMessage" style={{ color: 'red', marginTop: '8px' }}>
+                        {validationMessages[key]}
+                      </div>
 
-                  )}
+                    )}
+                  </div>
+
                 </div>
-              </div>
-            ))}
-          </form>
+              ))}
+            </form>
+          </div>
         </div>
         <div className="buttonContainer">
           <button className="cancelButton" onClick={onClose}>

@@ -20,7 +20,6 @@
   background-color: white;
   border-radius: 4px;
   z-index: 1002;
-  width: 40vw;
   padding: 24px;
 }
 
@@ -30,11 +29,33 @@
   font-weight: bold;
 }
 
+.form-horizontal {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+}
+
 .formItem {
   display: flex;
-  align-items: center; /* Align label and input vertically centered */
-  margin-bottom: 16px;
-  margin-left: 40px;
+  flex-flow: row wrap;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+  margin-bottom: 24px;
+  vertical-align: top;
 }
 
 .formItem label {
@@ -51,9 +72,7 @@
 }
 
 .validationMessage {
-  color: red;
-  margin-left: 20%;
-   clear: both;
+  clear: both;
     min-height: 22px;
     margin-top: -2px;
     color: rgba(0,0,0,.45);
@@ -120,6 +139,80 @@
   color: white;
 }
 
+.label-wrapper {
+  display: block;
+  flex: 0 0 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.label-wrapper > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  height: 32px;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+}
+
 .input-wrapper {
-  width: 100%;
+  display: block;
+  flex: 0 0 66.66666667%;
+  max-width: 66.66666667%;
+
+}
+
+
+.form-body {
+  padding: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .modal {
+
+    width: 80vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+
+  .modal {
+
+    width: 60vw;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .modal {
+
+    width: 50vw;
+  }
+ 
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .modal {
+
+    width: 50vw;
+  }
+ 
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .modal {
+
+    width: 40vw;
+  }
+  
 }
